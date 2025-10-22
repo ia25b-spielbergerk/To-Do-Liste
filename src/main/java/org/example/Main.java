@@ -39,7 +39,7 @@ public class Main {
 
     }
 
-    private static void zeigeMenu() {
+    public static void zeigeMenu() {
         System.out.println("Was willst du momentan machen?");
         System.out.println("1: Aufgabe hinzufügen");
         System.out.println("2: Alle Aufgaben anzeigen");
@@ -49,14 +49,14 @@ public class Main {
         System.out.print("Deine Wahl: ");
     }
 
-    private static void aufgabeHinzufuegen() {
+    public static void aufgabeHinzufuegen() {
         System.out.print("Gib die neue Aufgabe ein: ");
         String neueAufgabe = scanner.nextLine();
         aufgaben.add(neueAufgabe);
         System.out.println("Aufgabe wurde hinzugefügt!");
     }
 
-    private static void alleAufgabenAnzeigen() {
+    public static void alleAufgabenAnzeigen() {
         if (aufgaben.isEmpty()) {
             System.out.println("Keine Aufgaben vorhanden.");
         } else {
@@ -67,7 +67,7 @@ public class Main {
         }
     }
 
-    private static void aufgabeBearbeiten() {
+    public static void aufgabeBearbeiten() {
         alleAufgabenAnzeigen();
 
         if (!aufgaben.isEmpty()) {
@@ -86,7 +86,7 @@ public class Main {
         }
     }
 
-    private static void aufgabeLoeschen() {
+    public static void aufgabeLoeschen() {
         alleAufgabenAnzeigen();
 
         if (!aufgaben.isEmpty()) {
