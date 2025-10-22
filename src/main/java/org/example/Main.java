@@ -74,10 +74,32 @@ public class Main {
             System.out.println("Welche Task willst du bearbeiten: ");
             int nummer = scanner.nextInt();
             scanner.nextLine();
+
+            if (nummer > 0 && nummer <= aufgaben.size()) {
+                System.out.println("Gib eine neue Aufgabe ein: ");
+                String neueAufgabe = scanner.nextLine();
+                aufgaben.set(nummer - 1, neueAufgabe);
+                System.out.println("Aufgabe wurde bearbeitet");
+            } else {
+                System.out.println("Ungültige Nummer");
+            }
         }
     }
 
     private static void aufgabeLoeschen() {
+        alleAufgabenAnzeigen();
 
+        if (!aufgaben.isEmpty()) {
+            System.out.print("Welche Aufgabe möchtest du löschen: ");
+            int nummer = scanner.nextInt();
+            scanner.nextLine();
+
+            if (nummer > 0 && nummer <= aufgaben.size()) {
+                String geloeschteAufgabe = aufgaben.remove(nummer - 1);
+                System.out.println("Aufgabe \"" + geloeschteAufgabe + "\" wurde gelöscht!");
+            } else {
+                System.out.println("Ungültige Nummer");
+            }
+        }
     }
 }
