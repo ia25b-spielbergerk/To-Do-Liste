@@ -19,11 +19,11 @@ class MainTest {
     @Test
     void testListeIstLeer() {
         assertEquals(0, aufgaben.size());
+        assertTrue(aufgaben.isEmpty());
     }
 
     @Test
     void aufgabeHinzufuegen() {
-        Main.aufgabeHinzufuegen();
         aufgaben.add("Test");
         assertEquals(1, aufgaben.size());
         aufgaben.add("Hallo");

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static ArrayList<String> aufgaben = new ArrayList<>();
+    public static ArrayList<String> aufgaben = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -60,7 +60,8 @@ public class Main {
         if (aufgaben.isEmpty()) {
             System.out.println("Keine Aufgaben vorhanden.");
         } else {
-            System.out.println("\n=== Deine Aufgaben ===");
+            System.out.println();
+            System.out.println("=== Deine Aufgaben ===");
             for (int i = 0; i < aufgaben.size(); i++) {
                 System.out.println((i + 1) + ". " + aufgaben.get(i));
             }
@@ -96,7 +97,8 @@ public class Main {
 
             if (nummer > 0 && nummer <= aufgaben.size()) {
                 String geloeschteAufgabe = aufgaben.remove(nummer - 1);
-                System.out.println("Aufgabe \"" + geloeschteAufgabe + "\" wurde gelöscht!");
+                System.out.println();
+                System.out.println("Aufgabe " + geloeschteAufgabe + " wurde gelöscht!");
             } else {
                 System.out.println("Ungültige Nummer");
             }
