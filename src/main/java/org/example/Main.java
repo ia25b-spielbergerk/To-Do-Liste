@@ -36,7 +36,6 @@ public class Main {
 
             System.out.println();
         }
-
     }
 
     public static void zeigeMenu() {
@@ -103,5 +102,12 @@ public class Main {
                 System.out.println("Ungültige Nummer");
             }
         }
+    }
+
+    public static void resetScanner() {
+        if (scanner != null) {
+            scanner.close();
+        }
+        scanner = new Scanner(System.in);
     }
 }
